@@ -1,0 +1,1 @@
+WUNDERGROUND_API = Wunderground.new(ENV['WUNDERGROUND_KEY_ID'])

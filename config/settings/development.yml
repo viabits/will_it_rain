@@ -1,0 +1,8 @@
+wunderground:
+  stations:
+    ibirapuera:
+      code: ISPJARDI4
+      pws: pws:ISPJARDI4
+    usp:
+      code: ISOPAULO184
+      pws: pws:ISOPAULO184
