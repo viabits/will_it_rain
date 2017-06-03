@@ -17,7 +17,7 @@ namespace :forecast do
     # 0 means 1 hour ahead
     # 1 means 2 hours ahead
     # 2 means 3 hours ahead and so on.
-    next_hour = 4
+    next_hour = 12
     #
     puts "\n----- getting Weather Forecasts from API."
     forecast_items = WebServices::Forecast.new(station, next_hour).forecast_items
