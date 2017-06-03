@@ -9,17 +9,19 @@ module WebServices
     def forecast_items
       return {} unless valid_parameters?
       hash_stations = {}
-      selected_stations.each do |station|
-        array_station_items = []
-        station_items(station).each do |station_item|
-          array_station_items << to_hash(station_item)
-        end
-        hash_stations[to_name(station)] = array_station_items
-      end
+      selected_stations.each {|station| hash_stations[to_name(station)] = station_items_to_array(station)}
       return hash_stations
     end
 
     private
+
+    def station_items_to_array station
+      array_station_items = []
+      station_items(station).each do |station_item|
+        array_station_items << to_hash(station_item)
+      end
+      array_station_items
+    end
 
     def to_name station
       station[0]
