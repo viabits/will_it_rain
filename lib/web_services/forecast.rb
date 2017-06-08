@@ -30,13 +30,14 @@ module WebServices
     def to_hash station_item
       hour = station_item['FCTTIME']['hour']
       qpf = station_item["qpf"]["metric"]
+      pop = station_item["pop"]
       temp = station_item["temp"]["metric"]
       feelslike = station_item["feelslike"]["metric"]
       wspd = station_item["wspd"]["metric"]
       humidity = station_item["humidity"]
       icon_url = station_item["icon_url"]
       condition = station_item["condition"]
-      {hour: hour, qpf: "#{qpf}%", temp: temp, feelslike: feelslike,
+      {hour: hour, qpf: "#{qpf}%", pop: pop, temp: temp, feelslike: feelslike,
        wspd: wspd, humidity: "#{humidity}%", icon_url: icon_url,
        condition: condition}
     end

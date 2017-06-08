@@ -14,15 +14,15 @@ RSpec.describe Forecast, type: :model do
   let(:param3) {{station: nil, created_at: nil}}
 
   describe '.create_forecast_items' do
-    let(:item1) {{:hour=>10, :qpf=>"60%", :temp=>17, :feelslike=>16,
+    let(:item1) {{:hour=>10, :qpf=>"60%", :pop=> "60%", :temp=>17, :feelslike=>16,
                  :wspd=>7, :humidity=>"70%",
                  :icon_url=>"http://icons.wxug.com/i/c/k/nt_chancetstorms.gif",
                  :condition=>"Cloudy"}}
-    let(:item2) {{:hour=>11, :qpf=>"80%", :temp=>18, :feelslike=>17,
+    let(:item2) {{:hour=>11, :qpf=>"80%", :pop=> "60%", :temp=>18, :feelslike=>17,
                  :wspd=>9, :humidity=>"80%",
                  :icon_url=>"http://icons.wxug.com/i/c/k/nt_chancetstorms.gif",
                  :condition=>"Cloudy"}}
-    let(:item3) {{:hour=>12, :qpf=>"85%", :temp=>18, :feelslike=>17,
+    let(:item3) {{:hour=>12, :qpf=>"85%", :pop=> "60%", :temp=>18, :feelslike=>17,
                  :wspd=>8, :humidity=>"87%",
                  :icon_url=>"http://icons.wxug.com/i/c/k/nt_chancetstorms.gif",
                  :condition=>"Cloudy"}}
@@ -67,6 +67,10 @@ RSpec.describe Forecast, type: :model do
 
       it 'qpf correctly' do
         expect(subject[:qpf]).to eql('60%')
+      end
+
+      it 'pop correctly' do
+        expect(subject[:pop]).to eql('60%')
       end
 
       it 'temp correctly' do

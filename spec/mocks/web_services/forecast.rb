@@ -1,7 +1,7 @@
 module WebServices
   class Forecast
 
-    FAKE_FIELDS1 = {hour: 10, qpf: '90%', temp: 14, feelslike: 13,
+    FAKE_FIELDS1 = {hour: 10, qpf: '90%', pop: '90%', temp: 14, feelslike: 13,
                     wspd: 9, humidity: "80%",
                     icon_url: 'http://icons.wxug.com/i/c/k/nt_chancetstorms.gif',
                     condition: 'Cloudy'}

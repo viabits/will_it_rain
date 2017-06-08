@@ -92,6 +92,10 @@ RSpec.describe WebServices::Forecast, type: :lib do
           expect(station_first[:qpf]).not_to be_nil
         end
 
+        it 'returns pop' do
+          expect(station_first[:pop]).not_to be_nil
+        end
+
         it 'returns temp (temperature) correctly' do
           expect(station_first[:temp]).not_to be_nil
         end

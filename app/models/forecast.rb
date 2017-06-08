@@ -31,8 +31,8 @@ class Forecast
   end
 
   def self.item_fields item, forecast
-    { forecast: forecast, hour: item[:hour], qpf: item[:qpf], temp: item[:temp],
-      feelslike: item[:feelslike],
+    { forecast: forecast, hour: item[:hour], qpf: item[:qpf], pop: item[:pop],
+      temp: item[:temp],  feelslike: item[:feelslike],
       wspd: item[:wspd], humidity: item[:humidity], icon_url: item[:icon_url],
       condition: item[:condition] }
   end

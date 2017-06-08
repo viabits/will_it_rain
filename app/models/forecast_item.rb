@@ -2,6 +2,7 @@ class ForecastItem
   include Mongoid::Document
   field :hour, type: String
   field :qpf, type: String
+  field :pop, type: String
   field :temp, type: String
   field :feelslike, type: String
   field :wspd, type: String
