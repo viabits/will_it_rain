@@ -46,7 +46,6 @@ RSpec.describe ForecastItem, type: :model do
     end
 
     it 'creates pop correctly' do
-      #r = ForecastItem.create(param_forecast_item)
       expect(subject[:pop]).to eql(param_forecast_item[:pop])
     end
 

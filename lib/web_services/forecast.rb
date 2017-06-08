@@ -37,7 +37,7 @@ module WebServices
       humidity = station_item["humidity"]
       icon_url = station_item["icon_url"]
       condition = station_item["condition"]
-      {hour: hour, qpf: "#{qpf}%", pop: pop, temp: temp, feelslike: feelslike,
+      {hour: hour, qpf: "#{qpf}%", pop: "#{pop}%", temp: temp, feelslike: feelslike,
        wspd: wspd, humidity: "#{humidity}%", icon_url: icon_url,
        condition: condition}
     end
